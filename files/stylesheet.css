@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
+/*für alle gültig*/
+* {
+  font-family: 'Oxygen', sans-serif;
+  color: #ffffff;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+body {
+  background: url(background.png);
+}
+
+header {
+  font-size: 60px;
+  margin: 50px 200px 10px;
+}
+
+.ul-nav {
+  list-style-type: none;
+  margin: 0 200px;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(29, 29, 29, 0.76);
+  border-radius: 50px;
+}
+
+.li-nav {
+  float: left;
+}
+
+.li-nav a {
+  display: block;
+  text-align: center;
+  padding: 15px 30px;
+  font-size: 24px;
+
+}
+
+.li-nav a:hover:not(.active) {
+  background-color: #111111;
+}
+
+.active {
+  background-color: #4caf50;
+}
+
+/*main.html*/
+#m-body {
+  width: 800px;
+  margin: 100px auto 0;
+}
+
+#m-title {
+  font-family: 'Damion', cursive;
+  font-size: 80px;
+  color: #0084ff;
+}
+
+#m-large {
+  font-size: 50px;
+}
+
+/*lebenslauf.html*/
+h1.l-title {
+  font-size: 50px;
+  margin: 70px 0;
+}
+
+#l-inhalt {
+  width: 1150px;
+  height: 1000px;
+  margin: 50px auto;
+}
+
+#l-index {
+  float: left;
+}
+
+#l-index p {
+  font-weight: 700;
+  margin: 0;
+}
+
+#l-info {
+  float: right;
+}
+
+#l-info p {
+  margin: 0;
+}
+
+#l-picture {
+  margin-top: 100px;
+  margin-left: 120px;
+  border-radius: 180px;
+}
+
+/*kontakt.html*/
+.c-content {
+  margin-left: 300px;
+}
+
+h2.c-index {
+  font-size: 40px;
+  margin-top: 50px;
+}
+
+a.c-info:link,
+a.c-info:visited {
+  color: #0084ff;
+}
+
+/*social-media.html*/
+.sm-content {
+  margin-left: 300px;
+}
+
+h2.sm-index {
+  font-size: 40px;
+  margin-top: 50px;
+}
+
+a.sm-info {
+  color: #0084ff;
+}
+
+/*beispiele.html*/
+#b-body {
+  margin: 100px 0 0 150px;
+}
+
+.b-beispiele {
+  width: 400px;
+  height: 600px;
+  background-color: #11111183;
+  border-radius: 100px;
+  margin-left: 50px;
+}
+
+.b-title {
+  text-align: center;
+  font-size: 50px;
+}
+
+.b-description {
+  text-align: center;
+  font-size: 35px;
+}
+
+.b-list {
+  text-align: center;
+}
+
+#b-ul>li {
+  margin-left: 80px;
+}
+
+#b-items {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+.b-item {
+  float: left;
+}
+
+.b-item div {
+  padding: 15px 30px;
+  margin-top: 80px;
+}
+
+#b-item-middle div {
+  margin-top: 0;
+}
