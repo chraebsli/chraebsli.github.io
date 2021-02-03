@@ -15,7 +15,7 @@ body {
 
 header {
   font-size: 60px;
-  margin: 50px 200px 10px;
+  margin: 50px 200px 30px;
 }
 
 .ul-nav {
@@ -36,11 +36,10 @@ header {
   text-align: center;
   padding: 15px 30px;
   font-size: 24px;
-
 }
 
 .li-nav a:hover:not(.active) {
-  background-color: #111111;
+  background-color: #111111bb;
 }
 
 .active {
