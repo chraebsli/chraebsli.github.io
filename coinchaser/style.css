@@ -3,40 +3,50 @@
 body {
     background-color: rgba(0, 0, 0, 0.801);
     font-family: Orbitron;
+    color: rgba(255, 255, 255, 0.801);
 }
 
-.container {
-    display: flex;
-    justify-content: center;
+.main,
+.cap,
+.title {
+    text-align: center;
+}
+
+.main {
+    font-size: 70px;
+
+}
+
+.cap {
+    font-size: 25px;
+    margin-top: -70px;
 }
 
 .title {
     font-size: 50px;
-    color: rgba(255, 255, 255, 0.801);
-    text-align: center;
-    margin: 50px 0 70px 0;
+    margin: 120px 0 70px 0;
 }
 
-.categorys p {
-    display: inline;
-    color: rgba(255, 255, 255, 0.801);
-    font-size: 30px;
-    text-align: center;
-    margin: 50px 230px;
+.container {
+    width: 100%;
+    height: auto;
 }
 
 .col {
     float: left;
+    width: 33%;
 }
 
 .col p {
-    color: rgba(255, 255, 255, 0.801);
     font-size: 24px;
-    flex: 50%;
-    padding: 10px;
-    margin: 0 230px;
+    padding: 0px 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
 }
 
-.scores {
-    display: flex;
+.scores,
+.categorys {
+    width: 100%;
+    height: auto;
 }

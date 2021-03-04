@@ -2,6 +2,7 @@
 <html lang='de'>
 
 <head>
+    <script type="text/javascript" src="scores.json"></script>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel="stylesheet" href="style.css">
@@ -9,36 +10,99 @@
 </head>
 
 <body>
-    <h1 class="title">Leaderboard</h1>
-    <div class="container categorys">
-        <p>Time</p>
-        <p>Name</p>
-        <p>Points</p>
-    </div>
-    <div class="scores" id="scores">
 
-        <div class="col" id="times">
-            <!--     <p>02.03 15:43</p>
-            <p>02.03 17:05</p>
-            <p>02.03 17:05</p> -->
+    <p class="main">Coinchaser</p>
+    <p class="cap">by Nicholas and Ziyam</p>
+    <p class="title">Leaderboard</p>
+
+    <div class="container">
+        <div class="categorys">
+            <div class="col">
+                <p>Time</p>
+            </div>
+            <div class="col">
+                <p>Name</p>
+            </div>
+            <div class="col">
+                <p>Points</p>
+            </div>
         </div>
-        <div class="col" id="names">
-            <!--    <p>chraebsli</p>
-            <p>awd</p>
-            <p>lol</p> -->
-        </div>
-        <div class="col" id="points">
-            <!-- <p>1080</p>
-            <p>233</p>
-            <p>133</p> -->
+        <div class="scores" id="scores">
+            <div class="col" id="times">
+            </div>
+            <div class="col" id="names">
+            </div>
+            <div class="col" id="points">
+            </div>
         </div>
     </div>
+
     <script>
         let data = {
             "scores": [{
                     "time": "02.03 15:43",
                     "name": "chraebsli",
                     "points": 1080
+                },
+                {
+                    "time": "02.03 17:05",
+                    "name": "awd",
+                    "points": 233
+                },
+                {
+                    "time": "02.03 17:05",
+                    "name": "lol",
+                    "points": 133
+                },
+                {
+                    "time": "02.03 17:06",
+                    "name": "lol",
+                    "points": 307
+                },
+                {
+                    "time": "03.03 14:06",
+                    "name": "d",
+                    "points": 30
+                },
+                {
+                    "time": "02.03 17:05",
+                    "name": "awd",
+                    "points": 233
+                },
+                {
+                    "time": "02.03 17:05",
+                    "name": "lol",
+                    "points": 133
+                },
+                {
+                    "time": "02.03 17:06",
+                    "name": "lol",
+                    "points": 307
+                },
+                {
+                    "time": "03.03 14:06",
+                    "name": "d",
+                    "points": 30
+                },
+                {
+                    "time": "02.03 17:05",
+                    "name": "awd",
+                    "points": 233
+                },
+                {
+                    "time": "02.03 17:05",
+                    "name": "lol",
+                    "points": 133
+                },
+                {
+                    "time": "02.03 17:06",
+                    "name": "lol",
+                    "points": 307
+                },
+                {
+                    "time": "03.03 14:06",
+                    "name": "d",
+                    "points": 30
                 },
                 {
                     "time": "02.03 17:05",
