@@ -2,7 +2,6 @@
 <html lang='de'>
 
 <head>
-    <script type="text/javascript" src="scores.json"></script>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel="stylesheet" href="style.css">
@@ -10,6 +9,49 @@
 </head>
 
 <body>
+    <header>
+        <script>
+            const jscript = document.querySelector('header');
+            const insert = document.querySelector('section');
+            console.log(jscript)
+
+            let requestURL = 'https://chraebsli.github.io/coinchaser/scores.json';
+            let request = new XMLHttpRequest();
+            request.open('GET', requestURL);
+            request.responseType = 'json';
+            request.send();
+            request.onload = function () {
+                const scores = request.response;
+                console.log("1")
+                showscores(scores);
+            }
+
+            function showscores(jsonObj) {
+                const scores = jsonObj['scores'];
+                for (let i = 0; i < scores.length; i++) {
+                    const div = document.createElement('div');
+                    const ptime = document.createElement('p');
+                    const pname = document.createElement('p');
+                    const ppoints = document.createElement('p');
+                    console.log("2")
+
+                    ptime.textContent = 'Time:' + scores[i].time;
+                    pname.textContent = 'Name:' + scores[i].name;
+                    ppoints.textContent = 'Points:' + scores[i].points;
+                    console.log("3")
+
+                    div.appendChild(ptime);
+                    div.appendChild(pname);
+                    div.appendChild(ppoints);
+                    console.log(div)
+                    console.log(insert)
+                    insert.appendChild(div)
+                    console.log("4")
+                }
+            }
+
+        </script>
+    </header>
 
     <p class="main">Coinchaser</p>
     <p class="cap">by Nicholas and Ziyam</p>
@@ -28,6 +70,7 @@
             </div>
         </div>
         <div class="scores" id="scores">
+
             <div class="col" id="times">
             </div>
             <div class="col" id="names">
@@ -36,109 +79,9 @@
             </div>
         </div>
     </div>
+    <section>
 
-    <script>
-        let data = {
-            "scores": [{
-                    "time": "02.03 15:43",
-                    "name": "chraebsli",
-                    "points": 1080
-                },
-                {
-                    "time": "02.03 17:05",
-                    "name": "awd",
-                    "points": 233
-                },
-                {
-                    "time": "02.03 17:05",
-                    "name": "lol",
-                    "points": 133
-                },
-                {
-                    "time": "02.03 17:06",
-                    "name": "lol",
-                    "points": 307
-                },
-                {
-                    "time": "03.03 14:06",
-                    "name": "d",
-                    "points": 30
-                },
-                {
-                    "time": "02.03 17:05",
-                    "name": "awd",
-                    "points": 233
-                },
-                {
-                    "time": "02.03 17:05",
-                    "name": "lol",
-                    "points": 133
-                },
-                {
-                    "time": "02.03 17:06",
-                    "name": "lol",
-                    "points": 307
-                },
-                {
-                    "time": "03.03 14:06",
-                    "name": "d",
-                    "points": 30
-                },
-                {
-                    "time": "02.03 17:05",
-                    "name": "awd",
-                    "points": 233
-                },
-                {
-                    "time": "02.03 17:05",
-                    "name": "lol",
-                    "points": 133
-                },
-                {
-                    "time": "02.03 17:06",
-                    "name": "lol",
-                    "points": 307
-                },
-                {
-                    "time": "03.03 14:06",
-                    "name": "d",
-                    "points": 30
-                },
-                {
-                    "time": "02.03 17:05",
-                    "name": "awd",
-                    "points": 233
-                },
-                {
-                    "time": "02.03 17:05",
-                    "name": "lol",
-                    "points": 133
-                },
-                {
-                    "time": "02.03 17:06",
-                    "name": "lol",
-                    "points": 307
-                },
-                {
-                    "time": "03.03 14:06",
-                    "name": "d",
-                    "points": 30
-                }
-            ]
-        };
-
-        let times = names = points = '<div class="col">';
-        for (let d in data.scores) {
-            times += `<p>${data.scores[d].time}</p>`;
-            names += `<p>${data.scores[d].name}</p>`;
-            points += `<p>${data.scores[d].points}</p>`;
-        }
-        [times, names, points].map(i => i + '</div>').join('');
-        document.getElementById("times").innerHTML = times;
-        document.getElementById("names").innerHTML = names;
-        document.getElementById("points").innerHTML = points;
-
-    </script>
+    </section>
 </body>
 
 </html>
